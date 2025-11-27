@@ -1,0 +1,4147 @@
+{
+  "tables": [
+    {
+      "id": "tblvi32qchvrRys3i",
+      "name": "Contacts",
+      "primaryFieldId": "fldAjwvDjudhOvEMH",
+      "fields": [
+        {
+          "id": "fldAjwvDjudhOvEMH",
+          "name": "Full Name",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "CONCATENATE({fldDTQoJFTmxiYPWr},\" \",{fldIj07Q36LliGHsH})",
+            "referencedFieldIds": [
+              "fldDTQoJFTmxiYPWr",
+              "fldIj07Q36LliGHsH"
+            ],
+            "result": {
+              "type": "singleLineText"
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldDTQoJFTmxiYPWr",
+          "name": "Voornaam",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldIj07Q36LliGHsH",
+          "name": "Achternaam",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldNpg3vrFA16Mws7",
+          "name": "Straat + Nr.",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fld8vywicfFiLc8xv",
+          "name": "Postcode",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldQgkcch6GQgppL8",
+          "name": "Stad",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldWPNKDPaTAZB2kD",
+          "name": "Full Adress",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "CONCATENATE({fldNpg3vrFA16Mws7}, \", \" , {fld8vywicfFiLc8xv}, \" (\", {fldQgkcch6GQgppL8}, \")\" )\n",
+            "referencedFieldIds": [
+              "fldNpg3vrFA16Mws7",
+              "fld8vywicfFiLc8xv",
+              "fldQgkcch6GQgppL8"
+            ],
+            "result": {
+              "type": "singleLineText"
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "flduGiKLfGthZPi35",
+          "name": "Land",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selRhnzbzNaseyI6R",
+                "name": "BE",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel6IYWugeBkT7rEn",
+                "name": "NL",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldShuwTYxqP4lsoU",
+          "name": "Mobiel nummer",
+          "type": "phoneNumber"
+        },
+        {
+          "id": "fldNEDvsxPwdDxLGS",
+          "name": "E-mailadres",
+          "type": "email"
+        },
+        {
+          "id": "fldnLohNX2QSrCQiV",
+          "name": "Tags",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selhgChE4FpQAifrf",
+                "name": "Construction",
+                "color": "yellowLight1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldUapFRdLulDBSCY",
+          "name": "Status (Make)",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel2qglXykzqO4II8",
+                "name": "New",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selDjwSBUmtY67qre",
+                "name": "Verified",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selS9JzvBFY743dsi",
+                "name": "Update",
+                "color": "orangeLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldKuUsp6zEsIo5vr",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldFkQ3zevXSpR4A4",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "Europe/Brussels"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldqS97qYNvGxvCMz",
+          "name": "Link: Company",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblHCWiPfjiIUJfQE",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldxTtzz8Wy85JPQB"
+          },
+          "linkedTableId": "tblHCWiPfjiIUJfQE",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldeUhaMROS0MiGkm",
+          "name": "Link: Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldCdAC0eCIHfVw2Z"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fld3HCPEU8LGI4JHv",
+          "name": "Teamleader-ID",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldN6jgljAnyr0FhG",
+          "name": "Companies",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblHCWiPfjiIUJfQE",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldEWDz4bcznW421T"
+          },
+          "linkedTableId": "tblHCWiPfjiIUJfQE",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tblHCWiPfjiIUJfQE",
+      "name": "Companies",
+      "primaryFieldId": "fldvKaHHkHKj400fD",
+      "fields": [
+        {
+          "id": "fldvKaHHkHKj400fD",
+          "name": "Company Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldJSORgSAizR3cCy",
+          "name": "Straat + Nr.",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldntY3JxeIoZq9N6",
+          "name": "Postcode",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldlHhutsDTL7egRu",
+          "name": "Stad",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldynbWKBrGGkYp6t",
+          "name": "Adres",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldn56Ml79kqMXpx0",
+          "name": "Land",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selxepUJLyH1KGdIa",
+                "name": "BE"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldjf476Aa9UYyNDe",
+          "name": "Btw-nummer",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldY5h9uHQMgx5g69",
+          "name": "Telefoon",
+          "type": "phoneNumber"
+        },
+        {
+          "id": "fld9JJnV8D6nT78SA",
+          "name": "E-mailadres",
+          "type": "email"
+        },
+        {
+          "id": "flddDVC2GRyccmRf1",
+          "name": "Tags",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selFgbpsF1MQTB8P4",
+                "name": "Eigen Project"
+              },
+              {
+                "id": "selBS6dJZO2fBMKRl",
+                "name": "Leverancier"
+              },
+              {
+                "id": "selJZPhTQCK8BgNbg",
+                "name": "Klant"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldxgTLzmH9YMn8r6",
+          "name": "Status (Make)",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selANdyCbYbjrQjnw",
+                "name": "New",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "sel7lmEZZX2oT3mJh",
+                "name": "Verified",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selM8MyZPG5W3H2hq",
+                "name": "Update",
+                "color": "orangeLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldZZJA6dvmtiwzh9",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "Europe/Brussels"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldRiWUryGFLdnsII",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "Europe/Brussels"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldEWDz4bcznW421T",
+          "name": "Link: Contact",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblvi32qchvrRys3i",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldN6jgljAnyr0FhG"
+          },
+          "linkedTableId": "tblvi32qchvrRys3i",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldNWh9vnZgoF7NqP",
+          "name": "Link: Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldPNMMvVZKixL7mn"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldoWhgn9YntzFHgu",
+          "name": "Teamleader-ID",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldlPdJ4mMn8iIImK",
+          "name": "Full Adress",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "CONCATENATE(\n  {fldJSORgSAizR3cCy}, \", \" , {fldntY3JxeIoZq9N6}, \" \", \"(\" , {fldlHhutsDTL7egRu}, \")\"\n)",
+            "referencedFieldIds": [
+              "fldJSORgSAizR3cCy",
+              "fldntY3JxeIoZq9N6",
+              "fldlHhutsDTL7egRu"
+            ],
+            "result": {
+              "type": "singleLineText"
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldxTtzz8Wy85JPQB",
+          "name": "Contacts",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblvi32qchvrRys3i",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldqS97qYNvGxvCMz"
+          },
+          "linkedTableId": "tblvi32qchvrRys3i",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tblfVmtjlsEdFT0nN",
+      "name": "Deals",
+      "primaryFieldId": "fldyrKQbnlhjQ9Xtd",
+      "fields": [
+        {
+          "id": "fldyrKQbnlhjQ9Xtd",
+          "name": "Deal-ID",
+          "type": "formula",
+          "description": "Modify Formula -> Use \"Deal Nr.\" voor Index met \"P0\" als prefix. (ipv Deal-ID\n\n\nGenereert een unieke Deal-ID op basis van Nummer, Klant/Company en Titel.",
+          "options": {
+            "isValid": true,
+            "formula": "CONCATENATE(\n  \"P\" & {fldN4v9XzX6Ce5H1N} & \"-\",\n  SUBSTITUTE({fldCdAC0eCIHfVw2Z}, \" \", \"\"),\n  SUBSTITUTE({fldPNMMvVZKixL7mn}, \" \", \"\"),\n  \"-\",\n  SUBSTITUTE({fldbxNNF2M3peZs4k}, \" \", \"\")\n)",
+            "referencedFieldIds": [
+              "fldN4v9XzX6Ce5H1N",
+              "fldCdAC0eCIHfVw2Z",
+              "fldPNMMvVZKixL7mn",
+              "fldbxNNF2M3peZs4k"
+            ],
+            "result": {
+              "type": "singleLineText"
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldN4v9XzX6Ce5H1N",
+          "name": "Deal Nr.",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldbxNNF2M3peZs4k",
+          "name": "Project Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldvmiYX3lSddVemJ",
+          "name": "Contact Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldCdAC0eCIHfVw2Z",
+          "name": "Link: contact",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblvi32qchvrRys3i",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldeUhaMROS0MiGkm"
+          },
+          "linkedTableId": "tblvi32qchvrRys3i",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        },
+        {
+          "id": "fldPNMMvVZKixL7mn",
+          "name": "Link: Company",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblHCWiPfjiIUJfQE",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldNWh9vnZgoF7NqP"
+          },
+          "linkedTableId": "tblHCWiPfjiIUJfQE",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        },
+        {
+          "id": "fldbKgZjVkmwKfNgE",
+          "name": "Deal Type",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selvd18rIttjHJlDG",
+                "name": "Arrax.Studio",
+                "color": "redLight2"
+              },
+              {
+                "id": "selVgJ5YPMQJ2AZ9e",
+                "name": "Construction",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selFWapUYJpKE3bEp",
+                "name": "Upwork",
+                "color": "greenLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldcNfNc6FuVd77X0",
+          "name": "Fase",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selOj1nsXAwm0s7xg",
+                "name": "Nieuw",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selPzbuTfAt91BE4l",
+                "name": "Gecontacteerd",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selsSoi9UpI0JTJm8",
+                "name": "Prijsberekening",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "seljnNkObN2MeRNLI",
+                "name": "Aanvaard",
+                "color": "greenLight2"
+              },
+              {
+                "id": "sel6W8apEbsrxRB3e",
+                "name": "Geweigerd",
+                "color": "redLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldzKkknUYR2HlCi2",
+          "name": "Start Date",
+          "type": "date",
+          "options": {
+            "dateFormat": {
+              "name": "european",
+              "format": "D/M/YYYY"
+            }
+          }
+        },
+        {
+          "id": "fld3we6ZMU7667a12",
+          "name": "End Date",
+          "type": "date",
+          "options": {
+            "dateFormat": {
+              "name": "european",
+              "format": "D/M/YYYY"
+            }
+          }
+        },
+        {
+          "id": "fldv96NWPCwVYKHHO",
+          "name": "Budget",
+          "type": "currency",
+          "options": {
+            "precision": 2,
+            "symbol": "€"
+          }
+        },
+        {
+          "id": "fldbOHiCJ439tNdTQ",
+          "name": "Status (Make)",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel8E9vu8YLtfmMtm",
+                "name": "New",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "sel8QAsRbjVQuDC2u",
+                "name": "Verified",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selnXW1NMoeSgDhiw",
+                "name": "Update",
+                "color": "orangeLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldegATJFVLbZ3u7k",
+          "name": "Total Opp. m²",
+          "type": "rollup",
+          "options": {
+            "isValid": true,
+            "recordLinkFieldId": "fldX164NioetzrUXS",
+            "fieldIdInLinkedTable": "fldBhw2astTmG1ltq",
+            "referencedFieldIds": [],
+            "result": {
+              "type": "number",
+              "options": {
+                "precision": 2
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldBs64EfPAc4sFJy",
+          "name": "Total: Estimated Value",
+          "type": "rollup",
+          "options": {
+            "isValid": true,
+            "recordLinkFieldId": "fldQ0hlmNNf4Ry3TO",
+            "fieldIdInLinkedTable": "fld1LSM3Ndk2LFcxf",
+            "referencedFieldIds": [],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldjaQlEPGEpMADSO",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "Europe/Brussels"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldovUj8QXdO15f7Z",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "Europe/Brussels"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldz2WunLKzAcNeFf",
+          "name": "Report",
+          "type": "multipleAttachments",
+          "options": {
+            "isReversed": false
+          },
+          "isReversed": false
+        },
+        {
+          "id": "flddk2GxU1cvfQ9b0",
+          "name": "AI assist",
+          "type": "aiText",
+          "options": {
+            "referencedFieldIds": [
+              "fldz2WunLKzAcNeFf"
+            ],
+            "prompt": [
+              "Analyze the following document. \nExtract and provide all the text from the file and structure the formatting the same as the in the file.\n\nAttachment:",
+              {
+                "field": {
+                  "fieldId": "fldz2WunLKzAcNeFf"
+                }
+              },
+              "\n"
+            ]
+          }
+        },
+        {
+          "id": "fldKq8x821MUUS0Ov",
+          "name": "Report - Text",
+          "type": "richText"
+        },
+        {
+          "id": "fldX164NioetzrUXS",
+          "name": "Measurements",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblRCFcb2aHDzQNtt",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldrQCxACRn7rwPKE"
+          },
+          "linkedTableId": "tblRCFcb2aHDzQNtt",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldl8CV42OBhsjfox",
+          "name": "Activity List",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblF5ohNrlYW2rvSi",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldamDXY8B8dzUVad"
+          },
+          "linkedTableId": "tblF5ohNrlYW2rvSi",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldC9cozCphW4bRYj",
+          "name": "Material List",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tbln4f7Qr5bREKeOu",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fld3AjqNTGBE9OEXN"
+          },
+          "linkedTableId": "tbln4f7Qr5bREKeOu",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldOPbtU1A9MtkhEh",
+          "name": "Equipment List",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblCQf6v56bgKho1m",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldimjpsxHB3flOaF"
+          },
+          "linkedTableId": "tblCQf6v56bgKho1m",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldLp3e5Zw23jO3TR",
+          "name": "Time Estimation",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tbltCPzmapNe4DRRz",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldf58A0nVtosqILE"
+          },
+          "linkedTableId": "tbltCPzmapNe4DRRz",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldQ0hlmNNf4Ry3TO",
+          "name": "Project Estimation",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblFi24uTAAQZSwjt",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fld09gyq6M2gmm1EY"
+          },
+          "linkedTableId": "tblFi24uTAAQZSwjt",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldajYGAeUuSIfy3n",
+          "name": "Proposal",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblVe1pR3AoNiOVTy",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldBK5IOvbOANSl2R"
+          },
+          "linkedTableId": "tblVe1pR3AoNiOVTy",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldBz8svvMRzNGeHd",
+          "name": "Material Tracking",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tbl0B4Rmob8fBEi5E",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldWZ3IhO0ctmB7xv"
+          },
+          "linkedTableId": "tbl0B4Rmob8fBEi5E",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldSMha9qWXQhuInQ",
+          "name": "Planning",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblcJ3wSPtkvRCYRB",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldH0ic3wJuMo5o9w"
+          },
+          "linkedTableId": "tblcJ3wSPtkvRCYRB",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldtsIJS9Of5ABiiJ",
+          "name": "Teamleader-ID",
+          "type": "singleLineText"
+        }
+      ]
+    },
+    {
+      "id": "tblRCFcb2aHDzQNtt",
+      "name": "Measurements",
+      "primaryFieldId": "fldz8EiWBnX9W8tNe",
+      "fields": [
+        {
+          "id": "fldz8EiWBnX9W8tNe",
+          "name": "Measurement Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldomfX5E6YgI9hxL",
+          "name": "verdieping",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sell09dqi0HP6Xk6j",
+                "name": "Niveau 0"
+              },
+              {
+                "id": "selcwUsOzPzYjLbjp",
+                "name": "Niveau 1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldnapZbsIMyrmaGq",
+          "name": "Room",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selLuICxaG6Eohxzz",
+                "name": "Keuken",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selhpNPzbh6BYuvr9",
+                "name": "Hal",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "sel1rzRM1Ppu8OLaf",
+                "name": "Toilet",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sel1w0YT1Fm2toMkj",
+                "name": "2de Keuken",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selrGE8IgwGaNn48Y",
+                "name": "Badkamer",
+                "color": "yellowLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldVjk6QgbgzXEkgF",
+          "name": "Type",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selh7OloH8bJe75lm",
+                "name": "Floor",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selsMgjZmeDzN44eo",
+                "name": "Wall",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldY957etAr1LYSdZ",
+          "name": "Unit",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sels9mmGoUm0OBbfe",
+                "name": "m²",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selH2lw4UBgnst4yB",
+                "name": "m³",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selsqiV5OKaIC92Is",
+                "name": "l/m",
+                "color": "tealLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldfAVahDP7Ea23LV",
+          "name": "lengte 1 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldQ0jZ7PeAS20CWn",
+          "name": "lengte 2 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldkXf3goPZ5UXCZ7",
+          "name": "breedte 1 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldpLdl9DejfqxpW7",
+          "name": "breedte 2 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldmL5SfOtDTgxEF7",
+          "name": "hoogte 1 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fld52c4qKibzyXdsi",
+          "name": "hoogte 2 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldR3mLHDVuJ0vCrL",
+          "name": "dikte 1 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldpsyyURD6iwSeAc",
+          "name": "dikte 2 (mm)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldBhw2astTmG1ltq",
+          "name": "Oppervlakte m²",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "({fldfAVahDP7Ea23LV}*{fldkXf3goPZ5UXCZ7})/1000000 + ({fldmL5SfOtDTgxEF7}*{fldkXf3goPZ5UXCZ7})/1000000",
+            "referencedFieldIds": [
+              "fldfAVahDP7Ea23LV",
+              "fldkXf3goPZ5UXCZ7",
+              "fldmL5SfOtDTgxEF7"
+            ],
+            "result": {
+              "type": "number",
+              "options": {
+                "precision": 2
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldnTlDez9evvzIRl",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldKxirW0pRlkVoVk",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldrQCxACRn7rwPKE",
+          "name": "Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldX164NioetzrUXS"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tbln4f7Qr5bREKeOu",
+      "name": "Materials",
+      "primaryFieldId": "fldJVmBEHvdnoshyE",
+      "fields": [
+        {
+          "id": "fldJVmBEHvdnoshyE",
+          "name": "Item Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldALbGx4oWBc8nE2",
+          "name": "Status",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel7GaTAjBYS33uCy",
+                "name": "Buy",
+                "color": "redLight2"
+              },
+              {
+                "id": "selJ5x3QoHIQBKo7H",
+                "name": "In progress",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selwYDPhhGyih8lTG",
+                "name": "Purchased",
+                "color": "greenLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldkCF4dHER4iYlWl",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldrSPTHCuSJzPPFD",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldNPt4zyt3cFRSQa",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fld3AjqNTGBE9OEXN",
+          "name": "Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldC9cozCphW4bRYj"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tbltCPzmapNe4DRRz",
+      "name": "Time Estimation",
+      "primaryFieldId": "fldkLQsk6UnMaQfPw",
+      "fields": [
+        {
+          "id": "fldkLQsk6UnMaQfPw",
+          "name": "Activity Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fld9kj0Qt2hByhYjx",
+          "name": "Parent Category",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldf58A0nVtosqILE",
+          "name": "Link: Deal",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldLp3e5Zw23jO3TR"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        },
+        {
+          "id": "fld1aIiEzl6PcZwVN",
+          "name": "Duration (h:mm)",
+          "type": "duration",
+          "options": {
+            "durationFormat": "h:mm"
+          }
+        },
+        {
+          "id": "fldXivMBRgsKm9fl8",
+          "name": "Duration (Days)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldTvvtTwLjL5Iv2i",
+          "name": "Total Duration",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "{fld1aIiEzl6PcZwVN}",
+            "referencedFieldIds": [
+              "fld1aIiEzl6PcZwVN"
+            ],
+            "result": {
+              "type": "number",
+              "options": {
+                "precision": 0
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldNuLT8GN4xYo3qK",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldjFwLllbA1kJ3mS",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldnJp1BzD7W0vw3k",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldZ3ywMT3Kfa274x",
+          "name": "Project Tasks",
+          "type": "singleLineText"
+        }
+      ]
+    },
+    {
+      "id": "tblFi24uTAAQZSwjt",
+      "name": "Cost Estimation",
+      "primaryFieldId": "fldy8czM43nuBNvY9",
+      "fields": [
+        {
+          "id": "fldy8czM43nuBNvY9",
+          "name": "Item Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldnlwk5T1vMJk8IC",
+          "name": "Item Type",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selEFEk89tK1mraeV",
+                "name": "Labor"
+              },
+              {
+                "id": "selpEPLiQXab3zR5E",
+                "name": "Material"
+              },
+              {
+                "id": "selazVowOsdcBiC9M",
+                "name": "Equipment"
+              },
+              {
+                "id": "selW1ZfwkCsZUlrX2",
+                "name": "Fixed Cost"
+              },
+              {
+                "id": "selgmAtaXcI5ZairX",
+                "name": "Other"
+              },
+              {
+                "id": "selW4rTITcBjdeAKd",
+                "name": "Admin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldTXy18SomINEkmu",
+          "name": "QTY",
+          "type": "number",
+          "options": {
+            "precision": 1
+          }
+        },
+        {
+          "id": "fldIjM8RezoxtLpB0",
+          "name": "€ Item (excl)",
+          "type": "currency",
+          "options": {
+            "precision": 2,
+            "symbol": "€"
+          }
+        },
+        {
+          "id": "fldvropHtuYPRSJ1z",
+          "name": "€ Item (incl)",
+          "type": "currency",
+          "options": {
+            "precision": 2,
+            "symbol": "€"
+          }
+        },
+        {
+          "id": "fldSh0YkuCEAtbIpR",
+          "name": "BTW",
+          "type": "percent",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fld849GX7xr89goIw",
+          "name": "Price excl",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "IF(\n  {fldIjM8RezoxtLpB0}, \n  {fldIjM8RezoxtLpB0}, \n  {fldvropHtuYPRSJ1z} / (1 + {fldSh0YkuCEAtbIpR})\n)",
+            "referencedFieldIds": [
+              "fldIjM8RezoxtLpB0",
+              "fldvropHtuYPRSJ1z",
+              "fldSh0YkuCEAtbIpR"
+            ],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldiHLfA4JvRXaesn",
+          "name": "Price incl",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "{fld849GX7xr89goIw} * (1 + {fldSh0YkuCEAtbIpR})",
+            "referencedFieldIds": [
+              "fld849GX7xr89goIw",
+              "fldSh0YkuCEAtbIpR"
+            ],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldC6XQpsBTpPrZWj",
+          "name": "BTW Total",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "{fld1LSM3Ndk2LFcxf}-{fldLVAOkUAZ8Ur2px}",
+            "referencedFieldIds": [
+              "fld1LSM3Ndk2LFcxf",
+              "fldLVAOkUAZ8Ur2px"
+            ],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldLVAOkUAZ8Ur2px",
+          "name": "Total excl",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "{fldTXy18SomINEkmu} * {fld849GX7xr89goIw}",
+            "referencedFieldIds": [
+              "fldTXy18SomINEkmu",
+              "fld849GX7xr89goIw"
+            ],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fld1LSM3Ndk2LFcxf",
+          "name": "Total incl",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "{fldTXy18SomINEkmu} * {fldiHLfA4JvRXaesn}",
+            "referencedFieldIds": [
+              "fldTXy18SomINEkmu",
+              "fldiHLfA4JvRXaesn"
+            ],
+            "result": {
+              "type": "currency",
+              "options": {
+                "precision": 2,
+                "symbol": "€"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldVsDDR56dBfL4Zk",
+          "name": "URL",
+          "type": "url"
+        },
+        {
+          "id": "fldUFrSVjyDk3jolz",
+          "name": "Exclude",
+          "type": "checkbox",
+          "options": {
+            "icon": "check",
+            "color": "greenBright"
+          }
+        },
+        {
+          "id": "fldcCHnuywdNknZMq",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldFvC0d0yf1sDnMA",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fld09gyq6M2gmm1EY",
+          "name": "Link: Deal",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldQ0hlmNNf4Ry3TO"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        },
+        {
+          "id": "fldGdWyxsxujb2aTM",
+          "name": "Deal: Fase",
+          "type": "multipleLookupValues",
+          "options": {
+            "isValid": true,
+            "recordLinkFieldId": "fld09gyq6M2gmm1EY",
+            "fieldIdInLinkedTable": "fldcNfNc6FuVd77X0",
+            "result": {
+              "type": "singleSelect",
+              "options": {
+                "choices": [
+                  {
+                    "id": "selOj1nsXAwm0s7xg",
+                    "name": "Nieuw",
+                    "color": "grayLight2"
+                  },
+                  {
+                    "id": "selPzbuTfAt91BE4l",
+                    "name": "Gecontacteerd",
+                    "color": "cyanLight2"
+                  },
+                  {
+                    "id": "selsSoi9UpI0JTJm8",
+                    "name": "Prijsberekening",
+                    "color": "cyanLight2"
+                  },
+                  {
+                    "id": "seljnNkObN2MeRNLI",
+                    "name": "Aanvaard",
+                    "color": "greenLight2"
+                  },
+                  {
+                    "id": "sel6W8apEbsrxRB3e",
+                    "name": "Geweigerd",
+                    "color": "redLight2"
+                  }
+                ]
+              }
+            }
+          },
+          "isValid": true
+        }
+      ]
+    },
+    {
+      "id": "tblVe1pR3AoNiOVTy",
+      "name": "Proposals",
+      "primaryFieldId": "fldh58TFj0qj2wYDI",
+      "fields": [
+        {
+          "id": "fldh58TFj0qj2wYDI",
+          "name": "Measurement Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fld8VXYyGT9xQc4J6",
+          "name": "Status",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel7GaTAjBYS33uCy",
+                "name": "Buy",
+                "color": "redLight2"
+              },
+              {
+                "id": "selJ5x3QoHIQBKo7H",
+                "name": "In progress",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selwYDPhhGyih8lTG",
+                "name": "Purchased",
+                "color": "greenLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldSMrmej940W221p",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldZ2BbIeZ5FdTwKH",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldlZfmAaYg8jVzVe",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldBK5IOvbOANSl2R",
+          "name": "Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldajYGAeUuSIfy3n"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tblcJ3wSPtkvRCYRB",
+      "name": "Planning",
+      "primaryFieldId": "fldKYPitMfcuI0boE",
+      "fields": [
+        {
+          "id": "fldKYPitMfcuI0boE",
+          "name": "Activity Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldoCheZ3hpt3ngHW",
+          "name": "Activity Group",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sellfvrW8EKRpSX9d",
+                "name": "Voorbereiding",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selIeJFwWhhbK3BH9",
+                "name": "Activiteit 1",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selSHNaTV2kGSLUFc",
+                "name": "Activiteit 2",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sel62D6dfzwKihyme",
+                "name": "Activiteit 3",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selY1ZiDb499gq1EB",
+                "name": "Activiteit 4",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selkCsURuLBcSujBh",
+                "name": "Activiteit 5",
+                "color": "redLight2"
+              },
+              {
+                "id": "selPl2InhERAJtOux",
+                "name": "Activiteit 6",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selBoY1qq9Sc9XCSy",
+                "name": "Activiteit 7",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "sel1Fw9rGYarVuytD",
+                "name": "Activiteit 8",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selerhyPp4eA42uwv",
+                "name": "Activiteit 9",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selC4fqrxSHqz0I21",
+                "name": "Activiteit 10",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selUplHM7Pfvy8rLg",
+                "name": "Afwerking",
+                "color": "cyanLight1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldsMzZqfn6UHEFe5",
+          "name": "Verdieping",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "seluwt0LJ5dbwCHEJ",
+                "name": "Kelder",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selcJuewtU3DKkjpT",
+                "name": "Gelijkvloers",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sel9ByRH2lrKGkTRv",
+                "name": "1ste Verdiep",
+                "color": "greenLight2"
+              },
+              {
+                "id": "seleh9qMso6Jga1jF",
+                "name": "2de Verdiep",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldxul2AhXe2fmpmo",
+          "name": "Room (single)",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "seloUE4IpYI3MYVj7",
+                "name": "Algemeen",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selPcFp57YHU04IeY",
+                "name": "Living",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selPc0qLvmgG5cXlG",
+                "name": "Toilet",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sele5ZKUbodKhxHqo",
+                "name": "Slaapkamer",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel6zQlEk0QDpWrT6",
+                "name": "Badkamer",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selOoIw0YObY6rl0t",
+                "name": "Inkomhal",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selQ4XkI9AWkLCeVR",
+                "name": "2de Hal",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selUJEfx8MtjAeIcr",
+                "name": "Keuken",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selUhK6gxu7DNimk6",
+                "name": "2de Keuken",
+                "color": "redLight2"
+              },
+              {
+                "id": "selQfObXWWj1Lbxsw",
+                "name": "Voortuin",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selUi1aPZ632GntxW",
+                "name": "Achtertuin",
+                "color": "grayLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldhfeZfWRQEPvDut",
+          "name": "Room (multi)",
+          "type": "multipleSelects",
+          "options": {
+            "choices": [
+              {
+                "id": "seloUE4IpYI3MYVj7",
+                "name": "Algemeen",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selPcFp57YHU04IeY",
+                "name": "Living",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selPc0qLvmgG5cXlG",
+                "name": "Toilet",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sele5ZKUbodKhxHqo",
+                "name": "Slaapkamer",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel6zQlEk0QDpWrT6",
+                "name": "Badkamer",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selOoIw0YObY6rl0t",
+                "name": "Inkomhal",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selQ4XkI9AWkLCeVR",
+                "name": "2de Hal",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selUJEfx8MtjAeIcr",
+                "name": "Keuken",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selUhK6gxu7DNimk6",
+                "name": "2de Keuken",
+                "color": "redLight2"
+              },
+              {
+                "id": "selQfObXWWj1Lbxsw",
+                "name": "Voortuin",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selUi1aPZ632GntxW",
+                "name": "Achtertuin",
+                "color": "grayLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldRfN58nU9n42kiq",
+          "name": "Estimated Hours",
+          "type": "number",
+          "options": {
+            "precision": 1
+          }
+        },
+        {
+          "id": "fldANvcpI9rBqOY0b",
+          "name": "Calculated Hours",
+          "type": "formula",
+          "description": "Displays the value from Estimated Hours as the calculated hours.",
+          "options": {
+            "isValid": true,
+            "formula": "{fldRfN58nU9n42kiq}*60",
+            "referencedFieldIds": [
+              "fldRfN58nU9n42kiq"
+            ],
+            "result": {
+              "type": "duration",
+              "options": {
+                "durationFormat": "h:mm:ss"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fld4sTuS39g1u5y3w",
+          "name": "Total Duration",
+          "type": "duration",
+          "options": {
+            "durationFormat": "h:mm"
+          }
+        },
+        {
+          "id": "fld60m07STCLIsC0s",
+          "name": "Duration (Days)",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldG6Qjc0MKpKKeD6",
+          "name": "Start Date",
+          "type": "dateTime",
+          "options": {
+            "dateFormat": {
+              "name": "iso",
+              "format": "YYYY-MM-DD"
+            },
+            "timeFormat": {
+              "name": "24hour",
+              "format": "HH:mm"
+            },
+            "timeZone": "client"
+          }
+        },
+        {
+          "id": "fldX1NY3z0QPIHJfR",
+          "name": "Start date 3",
+          "type": "date",
+          "options": {
+            "dateFormat": {
+              "name": "european",
+              "format": "D/M/YYYY"
+            }
+          }
+        },
+        {
+          "id": "fldmRUMu8ewSypT3M",
+          "name": "End Date",
+          "type": "dateTime",
+          "options": {
+            "dateFormat": {
+              "name": "iso",
+              "format": "YYYY-MM-DD"
+            },
+            "timeFormat": {
+              "name": "24hour",
+              "format": "HH:mm"
+            },
+            "timeZone": "client"
+          }
+        },
+        {
+          "id": "fldgZcGS2ttLY2eBr",
+          "name": "End date 3",
+          "type": "date",
+          "options": {
+            "dateFormat": {
+              "name": "european",
+              "format": "D/M/YYYY"
+            }
+          }
+        },
+        {
+          "id": "fld1sJFTToptBjA3n",
+          "name": "Status",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selUsF7Cq9oli9MQF",
+                "name": "Not Started",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selFNwd6gXErs58Qq",
+                "name": "In Progress",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selX9mit3D18fdZMF",
+                "name": "Completed",
+                "color": "greenLight2"
+              },
+              {
+                "id": "sel4imrLFEA6RZ8ef",
+                "name": "Blocked",
+                "color": "redLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldyb8Nvp8IZqOsr2",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldFjP8X0sWEIIkWB",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fldFL8sbC2QLH3mQN",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldH0ic3wJuMo5o9w",
+          "name": "Link: Deal",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldSMha9qWXQhuInQ"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        },
+        {
+          "id": "fldhg3c09S6eIVoWS",
+          "name": "Dependencies",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblcJ3wSPtkvRCYRB",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldhbxtZaTmqmK6Q0",
+            "viewIdForRecordSelection": "viwbZJxocw3WYg021"
+          },
+          "linkedTableId": "tblcJ3wSPtkvRCYRB",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        },
+        {
+          "id": "fldhbxtZaTmqmK6Q0",
+          "name": "From field: Dependencies",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblcJ3wSPtkvRCYRB",
+            "isReversed": false,
+            "prefersSingleRecordLink": false,
+            "inverseLinkFieldId": "fldhg3c09S6eIVoWS"
+          },
+          "linkedTableId": "tblcJ3wSPtkvRCYRB",
+          "prefersSingleRecordLink": false,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tbl0B4Rmob8fBEi5E",
+      "name": "Material Logs",
+      "primaryFieldId": "fldxaqe0aixGmzgvn",
+      "fields": [
+        {
+          "id": "fldxaqe0aixGmzgvn",
+          "name": "Log-ID",
+          "type": "formula",
+          "options": {
+            "isValid": true,
+            "formula": "CONCATENATE(\n  YEAR({fldcmboSIOh6hI5w8}), MONTH({fldcmboSIOh6hI5w8}), DAY({fldcmboSIOh6hI5w8}),\n  \"-log\"\n)",
+            "referencedFieldIds": [
+              "fldcmboSIOh6hI5w8"
+            ],
+            "result": {
+              "type": "singleLineText"
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldFGldhhe52rMINK",
+          "name": "Item Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fld4FHWrzFDDiaqH6",
+          "name": "Item Category",
+          "type": "singleSelect",
+          "options": {
+            "choices": []
+          }
+        },
+        {
+          "id": "fldeKAUMS67sC6pNn",
+          "name": "QTY",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldDhsL2scgybUM3G",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldcmboSIOh6hI5w8",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fld6FenzuGW2dzzKn",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldWZ3IhO0ctmB7xv",
+          "name": "Link: Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldBz8svvMRzNGeHd"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tbllBMLw4KWnPBrRZ",
+      "name": "Time Logs",
+      "primaryFieldId": "fldNSB9iJextqcDQh",
+      "fields": [
+        {
+          "id": "fldNSB9iJextqcDQh",
+          "name": "type",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldaKmN1UuXMnISuZ",
+          "name": "category",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selq7Q4ccWE2Wj4mS",
+                "name": "Sub-Contracts",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel7vtm39gnwLia1p",
+                "name": "My Projects",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fld9ECItwFtY8bc5a",
+          "name": "project",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selpOZ6Ke7f3CWa7n",
+                "name": "P022-Valerie-Totaalrenovatie",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel3EWQCUWxmwjBP4",
+                "name": "P028-GunterCaus-Renovatiewerken",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "sel9m6e22ztpns7UC",
+                "name": "P020-Alix-Desco",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selUWcMmaDQAnIoXJ",
+                "name": "P024-Serge-Cabine Schilderen",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selhy4MmQ5dSHBK16",
+                "name": "P031-Nils-Gevel",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selIRPgM9tFSW6eh9",
+                "name": "P036-Simon-Mortex",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selqJvQOG18WTxCvC",
+                "name": "P025-Rosanne-Terras Aanleggen ",
+                "color": "redLight2"
+              },
+              {
+                "id": "selGmK8KKk6bplwcB",
+                "name": "P029-Alix-Badkamer Betegelen ",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selL1y93ldwnlXbFX",
+                "name": "P038-NAConstructionWorks-Berging Afwerken",
+                "color": "purpleLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldRZALO7VFmiOJ6l",
+          "name": "task",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sely5NdQUxrnIYr8T",
+                "name": "Zolder",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selpFo5DfvrBDRMIV",
+                "name": "Kamer Olivia",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selMfyYECdaUvaU6z",
+                "name": "Dak",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selWuDQgifVqgDSge",
+                "name": "Transport",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selg8qa57Atc8gilv",
+                "name": "Admin",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selpTkNdFWLEjB0vS",
+                "name": "Zijkamer Olivia",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selpavBBRHxcQ7FGL",
+                "name": "Badkamer - 1ste Verdiep",
+                "color": "redLight2"
+              },
+              {
+                "id": "selPsAAIe8MEA1kr3",
+                "name": "Materiaal - Halen + Leveren",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "seljY4QWn6DbMiCAF",
+                "name": "Werf opstellen",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selM9Uaq8yduFFucs",
+                "name": "Afplakken + Kitten",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selzNBPgZGzkXNALg",
+                "name": "Afplakken + Schilderen",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selodpXBCQiITReCp",
+                "name": "Werk Opkuisen ",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "selR6au3CSuK5bMok",
+                "name": "Slaapkamer - Plafond ",
+                "color": "tealLight1"
+              },
+              {
+                "id": "selOG9INM6lO0GEIL",
+                "name": "Slaapkamer - Muren",
+                "color": "greenLight1"
+              },
+              {
+                "id": "selNVACtlP0c5LccR",
+                "name": "Isolatie monteren (pluggen)",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "selP3gRnVQVVlioNB",
+                "name": "Panlatten voorbereiden + Monteren",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "selUX0vYfL9azke4s",
+                "name": "Stelling monteren",
+                "color": "redLight1"
+              },
+              {
+                "id": "selu7j0YStzbaSq79",
+                "name": "Isolatie monteren (pap)",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "selwcd8dpVsHjdTfm",
+                "name": "Garage",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "selVahZ64ZjGgglJP",
+                "name": "Oprit",
+                "color": "grayLight1"
+              },
+              {
+                "id": "sel9Fxjfle7snRCIj",
+                "name": "Tuin",
+                "color": "blueBright"
+              },
+              {
+                "id": "selu1tpTyLB4Lhs59",
+                "name": "Voorbereiding",
+                "color": "cyanBright"
+              },
+              {
+                "id": "seldlDu4sp5i4gWkV",
+                "name": "Laag 1",
+                "color": "tealBright"
+              },
+              {
+                "id": "sel9OlmLJBWHGkuHv",
+                "name": "Laag 2",
+                "color": "greenBright"
+              },
+              {
+                "id": "selyrCu4Ppa1FlkNw",
+                "name": "Laag 3",
+                "color": "yellowBright"
+              },
+              {
+                "id": "seljK36AxrznWQSpH",
+                "name": "Laag 4",
+                "color": "orangeBright"
+              },
+              {
+                "id": "selxsGPYnCkkol8it",
+                "name": "Transport ",
+                "color": "redBright"
+              },
+              {
+                "id": "selTU8VJfU36Icm9k",
+                "name": "Tegelen",
+                "color": "pinkBright"
+              },
+              {
+                "id": "selHIrwBxVInAc9zy",
+                "name": "Algemeen",
+                "color": "purpleBright"
+              },
+              {
+                "id": "selNN0nQNadcyJzgR",
+                "name": "Voegen",
+                "color": "grayBright"
+              },
+              {
+                "id": "seliDlS9bZoe1dAWH",
+                "name": "Werf Algemeen",
+                "color": "blueDark1"
+              },
+              {
+                "id": "selX3Ij5gglZACv3t",
+                "name": "Muur",
+                "color": "cyanDark1"
+              },
+              {
+                "id": "selxWaYlDS5M5QWCs",
+                "name": "Vloer",
+                "color": "tealDark1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldxzEGdV4ltsqNce",
+          "name": "subtask",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel8sAr0GoV3Bmv0E",
+                "name": "Afbraak",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selpCP443yd9x8Unj",
+                "name": "OSB Monteren",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selBK1rWIXvfYo3x2",
+                "name": "Chape",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sel1M8my9vqAtLYdL",
+                "name": "Schoonmaken",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selK5Y9NiTWUumVri",
+                "name": "Isoleren",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selP1CGcpAIOuM7Fm",
+                "name": "",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selaf82Tto9ZGvPnI",
+                "name": "Dampscherm Monteren ",
+                "color": "redLight2"
+              },
+              {
+                "id": "seliD6sCTO1o5m0l2",
+                "name": "Werf Bezoeken",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selMdw3yr8IvSrk3C",
+                "name": "Schilderen",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selSsQzlKxFcaVU4Q",
+                "name": "Isoleren ",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selANUtzro0z7IHZn",
+                "name": "Dampscherm monteren ",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selYb2pqp77O3l4o3",
+                "name": "Afbraak ",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "selE06X7WF9EVO5wF",
+                "name": "Offerte & Factuur",
+                "color": "tealLight1"
+              },
+              {
+                "id": "selpuAEanfuVccvqP",
+                "name": "Balken Monteren",
+                "color": "greenLight1"
+              },
+              {
+                "id": "sel4kyinDK5SajhYN",
+                "name": "Lamp Verlengen",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "seldi7pwWCrh4Z0lX",
+                "name": "Retour - zagen + monteren",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "selEaQuDzziSjmM5B",
+                "name": "Afwerking - Platen Zagen",
+                "color": "redLight1"
+              },
+              {
+                "id": "sels5oc2MXUO1DlaH",
+                "name": "Isolatie ",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "seljMvuUATNf2k5g6",
+                "name": "Afwerking - Platen monteren",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "selirHVaosNEP0fNC",
+                "name": "Afplakken ",
+                "color": "grayLight1"
+              },
+              {
+                "id": "selpKPj3U9vfYwryb",
+                "name": "Schuren",
+                "color": "blueBright"
+              },
+              {
+                "id": "sel0GuGZ8fnSPyXt4",
+                "name": "Plamuren ",
+                "color": "cyanBright"
+              },
+              {
+                "id": "selefe4FppUV2gDJN",
+                "name": "Sleuf Graven",
+                "color": "tealBright"
+              },
+              {
+                "id": "selV1LINYlKjcfclT",
+                "name": "Graafwerken ",
+                "color": "greenBright"
+              },
+              {
+                "id": "selnbyturkrEUUorz",
+                "name": "Graafwerken",
+                "color": "yellowBright"
+              },
+              {
+                "id": "selpnhoIUtyqgyShc",
+                "name": "Pad Aanleggen",
+                "color": "orangeBright"
+              },
+              {
+                "id": "selIeR96KCzJ9YJUz",
+                "name": "Laag Aanbrengen",
+                "color": "redBright"
+              },
+              {
+                "id": "selwK9NYx1QSpGn5m",
+                "name": "Werkbezoek ",
+                "color": "pinkBright"
+              },
+              {
+                "id": "selBzIfyiZX1Sjlbx",
+                "name": "Voorbereiding",
+                "color": "purpleBright"
+              },
+              {
+                "id": "selUE9xqsBSG6frMU",
+                "name": "Voorbereiding ",
+                "color": "grayBright"
+              },
+              {
+                "id": "selWMEvRmbdhjLBkB",
+                "name": "Draad Spannen",
+                "color": "blueDark1"
+              },
+              {
+                "id": "sel1VFr9G4ufzrMiR",
+                "name": "Bomen planten ",
+                "color": "cyanDark1"
+              },
+              {
+                "id": "sel5PCTiiUBzZs4ze",
+                "name": "Algemeen",
+                "color": "tealDark1"
+              },
+              {
+                "id": "selgOBfm1Gu6ZyYAO",
+                "name": "Vloer",
+                "color": "greenDark1"
+              },
+              {
+                "id": "selmh8fsgAzKcdQ1o",
+                "name": "Wand",
+                "color": "yellowDark1"
+              },
+              {
+                "id": "sel9ro3NbYXXY3a7V",
+                "name": "80x80 (vloer)",
+                "color": "orangeDark1"
+              },
+              {
+                "id": "selVS4ESEKTpuEHS7",
+                "name": "120x60 (Wand)",
+                "color": "redDark1"
+              },
+              {
+                "id": "seleRQRpMoGasTzOx",
+                "name": "Materiaal halen ",
+                "color": "pinkDark1"
+              },
+              {
+                "id": "selX9eu6mGFoJtGVR",
+                "name": "Plinten",
+                "color": "purpleDark1"
+              },
+              {
+                "id": "selEGEZAxPoaQBtZw",
+                "name": "Isolatie Monteren",
+                "color": "grayDark1"
+              },
+              {
+                "id": "selKuQrBknNC558pI",
+                "name": "Schabben Monteren",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selE9WdsolAkW27v8",
+                "name": "Vloer Schuren",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selXKsXvJPSjHa7Qu",
+                "name": "Lak Aanbrengen",
+                "color": "tealLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldirxGQvBmSfR2Vz",
+          "name": "unix_start",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldZ4QvbB2jbCuKZQ",
+          "name": "unix_end",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldFITlNjYlbxR8IL",
+          "name": "start",
+          "type": "dateTime",
+          "options": {
+            "dateFormat": {
+              "name": "iso",
+              "format": "YYYY-MM-DD"
+            },
+            "timeFormat": {
+              "name": "24hour",
+              "format": "HH:mm"
+            },
+            "timeZone": "utc"
+          }
+        },
+        {
+          "id": "fldHMNgYugNHVdhUk",
+          "name": "end",
+          "type": "dateTime",
+          "options": {
+            "dateFormat": {
+              "name": "iso",
+              "format": "YYYY-MM-DD"
+            },
+            "timeFormat": {
+              "name": "24hour",
+              "format": "HH:mm"
+            },
+            "timeZone": "utc"
+          }
+        },
+        {
+          "id": "fldbUlPG8HJqPvyfE",
+          "name": "date",
+          "type": "date",
+          "options": {
+            "dateFormat": {
+              "name": "european",
+              "format": "D/M/YYYY"
+            }
+          }
+        },
+        {
+          "id": "fldV079slAobJA77h",
+          "name": "start_time",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selm7r4dfJSZoRjJf",
+                "name": "12:00",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selBLWK8iUBB0SSWk",
+                "name": "08:00",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "sele2H7O1YqXE3S0f",
+                "name": "15:15",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selyU5CJ8aq71xmn1",
+                "name": "15:30",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selpTLGonUx5ug8nl",
+                "name": "08:30",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selcUrBmvHf7LUNGh",
+                "name": "17:45",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selngzZZH16lVBeLF",
+                "name": "20:00",
+                "color": "redLight2"
+              },
+              {
+                "id": "selP6Ns1xKdY221Sq",
+                "name": "14:00",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selm1J2GXukU8BfLw",
+                "name": "15:00",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "sel68TOlUzw9QZ718",
+                "name": "17:00",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selSqMZPk6cEXGdyl",
+                "name": "08:45",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selTzFEWX8RnUbS7N",
+                "name": "13:15",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "sel7KMLb8H5kpFmYy",
+                "name": "18:30",
+                "color": "tealLight1"
+              },
+              {
+                "id": "sel9wEB53pz607WXH",
+                "name": "10:00",
+                "color": "greenLight1"
+              },
+              {
+                "id": "sel4yrE7Dl3zMTKmh",
+                "name": "13:30",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "seleF33VjgzEYTSln",
+                "name": "18:00",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "selYSsvNprf5xFaU2",
+                "name": "12:45",
+                "color": "redLight1"
+              },
+              {
+                "id": "sel3RFPKIGX2mbfiD",
+                "name": "00:00",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "sel4kbTkNr4StpREB",
+                "name": "07:45",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "sel1u6FAnZyUtBlHh",
+                "name": "13:45",
+                "color": "grayLight1"
+              },
+              {
+                "id": "selKj4R0O4rNoSr6x",
+                "name": "15:45",
+                "color": "blueBright"
+              },
+              {
+                "id": "selml7vGqKpJQZQuw",
+                "name": "09:15",
+                "color": "cyanBright"
+              },
+              {
+                "id": "selc3UWQQ5uaG80oP",
+                "name": "10:30",
+                "color": "tealBright"
+              },
+              {
+                "id": "selArOOIEuLosBS3J",
+                "name": "11:00",
+                "color": "greenBright"
+              },
+              {
+                "id": "selfRA7Zq3nvY3gFQ",
+                "name": "11:44",
+                "color": "yellowBright"
+              },
+              {
+                "id": "selRFdKW26fCjCcwq",
+                "name": "12:30",
+                "color": "orangeBright"
+              },
+              {
+                "id": "selGhnDQRUAbvacnP",
+                "name": "09:00",
+                "color": "redBright"
+              },
+              {
+                "id": "selxH8c0iu1ZQbjwV",
+                "name": "13:00",
+                "color": "pinkBright"
+              },
+              {
+                "id": "sel8C0AcP2gbVmevJ",
+                "name": "16:00",
+                "color": "purpleBright"
+              },
+              {
+                "id": "sel9EEtdpgd038FlS",
+                "name": "11:30",
+                "color": "grayBright"
+              },
+              {
+                "id": "selYh2tWcA9We8ixU",
+                "name": "06:45",
+                "color": "blueDark1"
+              },
+              {
+                "id": "selBqdjzyH6mQBByO",
+                "name": "08:15",
+                "color": "cyanDark1"
+              },
+              {
+                "id": "selxNHgrCuaD4Pbbr",
+                "name": "06:30",
+                "color": "tealDark1"
+              },
+              {
+                "id": "sel8SwGl7R6VIsS8w",
+                "name": "08:28",
+                "color": "greenDark1"
+              },
+              {
+                "id": "sel8ncbVAlkloEZVf",
+                "name": "07:00",
+                "color": "yellowDark1"
+              },
+              {
+                "id": "selLxK6DTNrH1ATYP",
+                "name": "06:57",
+                "color": "orangeDark1"
+              },
+              {
+                "id": "selU8WidfPjieVoHJ",
+                "name": "10:10",
+                "color": "redDark1"
+              },
+              {
+                "id": "sel7dVw45YgQvykEN",
+                "name": "11:56",
+                "color": "pinkDark1"
+              },
+              {
+                "id": "selp3FJGDircAGDP9",
+                "name": "09:45",
+                "color": "purpleDark1"
+              },
+              {
+                "id": "selkrOyMuEYem026j",
+                "name": "15:40",
+                "color": "grayDark1"
+              },
+              {
+                "id": "sel8ujvDnl9bkcRgw",
+                "name": "06:15",
+                "color": "blueLight2"
+              },
+              {
+                "id": "seltddDPZeOeaTred",
+                "name": "06:20",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selufrS3oiang3m3L",
+                "name": "07:30",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selxdIiJ4NxPtgQ4W",
+                "name": "06:00",
+                "color": "greenLight2"
+              },
+              {
+                "id": "seliQQMrMlAfMj73I",
+                "name": "07:05",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selXalRVFoi2urHfj",
+                "name": "09:30",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selr98cZ1pWCDyN6Z",
+                "name": "19:30",
+                "color": "redLight2"
+              },
+              {
+                "id": "selSCMQsVV4Pn0LWY",
+                "name": "08:21",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selQQW5AUMOJTBDE0",
+                "name": "09:05",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selgSpLu0ZwelkX78",
+                "name": "09:55",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selD6hAyr2QgkHJiO",
+                "name": "17:10",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selJqTv0SdKWqnzBF",
+                "name": "06:46",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "selpR47LCrbRATNvt",
+                "name": "07:35",
+                "color": "tealLight1"
+              },
+              {
+                "id": "sel4hid6pxuIVpykf",
+                "name": "12:38",
+                "color": "greenLight1"
+              },
+              {
+                "id": "sel3a6BISIsBXtZ3f",
+                "name": "14:30",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "selArjEjdQrwN6fXv",
+                "name": "08:50",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "selMf3AHS0t1tjyyx",
+                "name": "11:15",
+                "color": "redLight1"
+              },
+              {
+                "id": "selxBQI6jbySffSQ3",
+                "name": "14:45",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "selHC1NtmkafrwIvQ",
+                "name": "16:45",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "selWoiJ6uPkslMC19",
+                "name": "10:45",
+                "color": "grayLight1"
+              },
+              {
+                "id": "seloqOcJRtEyAM1cB",
+                "name": "15:26",
+                "color": "blueBright"
+              },
+              {
+                "id": "sel8dFmwBEcnaWVnO",
+                "name": "16:30",
+                "color": "cyanBright"
+              },
+              {
+                "id": "seloHOnKKp7VuTHES",
+                "name": "17:15",
+                "color": "tealBright"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldS82Ng9iRv3ndFA",
+          "name": "end_time",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selh51951UVh1N8It",
+                "name": "22:00",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selBNTtXBKy9Owfjg",
+                "name": "21:00",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selD7Prh5skQjA0z8",
+                "name": "14:00",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sela39RZYParT2Vz0",
+                "name": "01:00",
+                "color": "greenLight2"
+              },
+              {
+                "id": "seltthAePD9le45Q8",
+                "name": "15:30",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selh4iQVnyZPxNo8L",
+                "name": "21:30",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selg5zwVObi2LYt4e",
+                "name": "15:15",
+                "color": "redLight2"
+              },
+              {
+                "id": "selhaRshpnUtQcfpL",
+                "name": "16:15",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selyMoy0ScBiagGxq",
+                "name": "16:30",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "sel0USDRt0kTW5q5u",
+                "name": "17:45",
+                "color": "grayLight2"
+              },
+              {
+                "id": "sel5xcDP1V9PS5kbi",
+                "name": "18:45",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selSqoBpLRYbbzEbu",
+                "name": "15:00",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "sel5QrU60VHByLFl5",
+                "name": "17:00",
+                "color": "tealLight1"
+              },
+              {
+                "id": "selcBJQA3HKlbbZaO",
+                "name": "18:00",
+                "color": "greenLight1"
+              },
+              {
+                "id": "selYx3Z8heXfJhCfo",
+                "name": "12:15",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "selNR5Kw2F8P0uF3q",
+                "name": "19:30",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "sela8IpyVTUASyjR7",
+                "name": "12:30",
+                "color": "redLight1"
+              },
+              {
+                "id": "sel89ddhcesppaYfN",
+                "name": "19:00",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "sel968aKfeox4iRNq",
+                "name": "14:45",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "sel8AVeAtQQq3AsCB",
+                "name": "10:00",
+                "color": "grayLight1"
+              },
+              {
+                "id": "selMPlSl3BCGnBCWn",
+                "name": "13:00",
+                "color": "blueBright"
+              },
+              {
+                "id": "sely6nYq4qI7jLg3A",
+                "name": "15:45",
+                "color": "cyanBright"
+              },
+              {
+                "id": "selrzO7Zl4A7714qx",
+                "name": "17:30",
+                "color": "tealBright"
+              },
+              {
+                "id": "sel89IxPQ3N2VXqxT",
+                "name": "10:30",
+                "color": "greenBright"
+              },
+              {
+                "id": "selCLieFopslD2yNk",
+                "name": "11:00",
+                "color": "yellowBright"
+              },
+              {
+                "id": "sel9yv50AoW8ju6vi",
+                "name": "11:45",
+                "color": "orangeBright"
+              },
+              {
+                "id": "sel7PE57UrzuPO9WD",
+                "name": "12:00",
+                "color": "redBright"
+              },
+              {
+                "id": "selxMzaLaBt9Ujal1",
+                "name": "13:30",
+                "color": "pinkBright"
+              },
+              {
+                "id": "sel2EZUURKt9D15yH",
+                "name": "13:15",
+                "color": "purpleBright"
+              },
+              {
+                "id": "selNMgE0yGv9AtscI",
+                "name": "11:30",
+                "color": "grayBright"
+              },
+              {
+                "id": "selA0BotQGFPKQqTm",
+                "name": "14:30",
+                "color": "blueDark1"
+              },
+              {
+                "id": "selbcn88y7ZaibMUe",
+                "name": "16:00",
+                "color": "cyanDark1"
+              },
+              {
+                "id": "selTWqiwNFQIsSyQI",
+                "name": "13:45",
+                "color": "tealDark1"
+              },
+              {
+                "id": "selErK6FCfpVxmMjI",
+                "name": "07:45",
+                "color": "greenDark1"
+              },
+              {
+                "id": "selUCZKSzJEmu37P9",
+                "name": "07:30",
+                "color": "yellowDark1"
+              },
+              {
+                "id": "sellhgjSM2Z2E11A2",
+                "name": "08:28",
+                "color": "orangeDark1"
+              },
+              {
+                "id": "selmm3gYL1vU35rP9",
+                "name": "18:23",
+                "color": "redDark1"
+              },
+              {
+                "id": "selQ0NpaKIdh5fonv",
+                "name": "08:00",
+                "color": "pinkDark1"
+              },
+              {
+                "id": "selaF6tJVsuf7gYWW",
+                "name": "18:32",
+                "color": "purpleDark1"
+              },
+              {
+                "id": "sel9E9P5lkKsyrdUK",
+                "name": "10:10",
+                "color": "grayDark1"
+              },
+              {
+                "id": "selRLr2rlSRrN53Vl",
+                "name": "12:45",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selwjel7D4z8YWLfj",
+                "name": "17:49",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selxeJq5Fy9m0zhxn",
+                "name": "08:30",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sel7eDErSGRG8jKpr",
+                "name": "09:45",
+                "color": "greenLight2"
+              },
+              {
+                "id": "seltRq0RLhLOE9OFo",
+                "name": "15:10",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selFby5e7GlfhrfRy",
+                "name": "07:15",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selpW0HYf2vC8YYpq",
+                "name": "07:20",
+                "color": "redLight2"
+              },
+              {
+                "id": "selQkvCy9XPwwp57I",
+                "name": "17:32",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selzbMf2UWQczbjau",
+                "name": "07:05",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "sel66eiKGNcUcNffV",
+                "name": "19:40",
+                "color": "grayLight2"
+              },
+              {
+                "id": "sel9860lDzAOD9d9i",
+                "name": "20:00",
+                "color": "blueLight1"
+              },
+              {
+                "id": "seltgGIlGpHxufXrM",
+                "name": "09:05",
+                "color": "cyanLight1"
+              },
+              {
+                "id": "selWkr5eygNuoWZHX",
+                "name": "09:55",
+                "color": "tealLight1"
+              },
+              {
+                "id": "selhJlxXoZAdKEqsO",
+                "name": "17:10",
+                "color": "greenLight1"
+              },
+              {
+                "id": "sel20ZH1dEYG8uExB",
+                "name": "07:17",
+                "color": "yellowLight1"
+              },
+              {
+                "id": "selIEDGUpU82TvkNd",
+                "name": "08:15",
+                "color": "orangeLight1"
+              },
+              {
+                "id": "selOyEkHRs0b82Zar",
+                "name": "12:04",
+                "color": "redLight1"
+              },
+              {
+                "id": "selp5q5tlacfIPjMe",
+                "name": "17:55",
+                "color": "pinkLight1"
+              },
+              {
+                "id": "selonfiCmmJUmBJRN",
+                "name": "09:30",
+                "color": "purpleLight1"
+              },
+              {
+                "id": "selBgNE6STYqXbEPN",
+                "name": "11:15",
+                "color": "grayLight1"
+              },
+              {
+                "id": "sellU4J3HVRur5oQU",
+                "name": "16:45",
+                "color": "blueBright"
+              },
+              {
+                "id": "sel1rVM9IZfXNZCCG",
+                "name": "09:42",
+                "color": "cyanBright"
+              },
+              {
+                "id": "selDxw4jInYvAlqvN",
+                "name": "10:45",
+                "color": "tealBright"
+              },
+              {
+                "id": "selUeDSwT2iFLIOma",
+                "name": "15:25",
+                "color": "greenBright"
+              },
+              {
+                "id": "selD54lMRRRCNCPZF",
+                "name": "16:20",
+                "color": "yellowBright"
+              },
+              {
+                "id": "selyd4nEiq9fdRHrl",
+                "name": "17:15",
+                "color": "orangeBright"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldqSepinUK9Z9eNp",
+          "name": "duration",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldzUNecARiA2wIzl",
+          "name": "distance",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fld29x19w5a0bzGvc",
+          "name": "quantity",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldu8fz7qTI1h7x70",
+          "name": "rate",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldWXg5biqstHUgGJ",
+          "name": "sum",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fld6k97nTsRJcIedi",
+          "name": "rounding_minutes",
+          "type": "number",
+          "options": {
+            "precision": 0
+          }
+        },
+        {
+          "id": "fldy3KvYRIpmGMwl8",
+          "name": "rounding_method",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selY3EijzX1pgmycK",
+                "name": "NEAREST",
+                "color": "blueLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldXezEQMfhCv0zUK",
+          "name": "billing",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selJ7ZeOBpnXwLPH8",
+                "name": "BILLED",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel8F4Axt62LczVfS",
+                "name": "UNBILLED",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldE2OU1NXqYn3b8P",
+          "name": "note",
+          "type": "multilineText"
+        },
+        {
+          "id": "fld7v9KvRGnXiZRuO",
+          "name": "user",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "selBj1I0VA5tVe2Mf",
+                "name": "Jari",
+                "color": "blueLight2"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tblF5ohNrlYW2rvSi",
+      "name": "Activity List",
+      "primaryFieldId": "flddka3oo7QVTPIpl",
+      "fields": [
+        {
+          "id": "flddka3oo7QVTPIpl",
+          "name": "Activity Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldRYCZUF93UecNID",
+          "name": "Activity Group",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sellfvrW8EKRpSX9d",
+                "name": "Voorbereiding",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selIeJFwWhhbK3BH9",
+                "name": "Activiteit 1",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selSHNaTV2kGSLUFc",
+                "name": "Activiteit 2",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sel62D6dfzwKihyme",
+                "name": "Activiteit 3",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selY1ZiDb499gq1EB",
+                "name": "Activiteit 4",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selkCsURuLBcSujBh",
+                "name": "Activiteit 5",
+                "color": "redLight2"
+              },
+              {
+                "id": "selPl2InhERAJtOux",
+                "name": "Activiteit 6",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selBoY1qq9Sc9XCSy",
+                "name": "Activiteit 7",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "sel1Fw9rGYarVuytD",
+                "name": "Activiteit 8",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selerhyPp4eA42uwv",
+                "name": "Activiteit 9",
+                "color": "grayLight2"
+              },
+              {
+                "id": "selC4fqrxSHqz0I21",
+                "name": "Activiteit 10",
+                "color": "blueLight1"
+              },
+              {
+                "id": "selUplHM7Pfvy8rLg",
+                "name": "Afwerking",
+                "color": "cyanLight1"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldV8UKlRfKlStcfM",
+          "name": "Verdieping",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "seluwt0LJ5dbwCHEJ",
+                "name": "Kelder",
+                "color": "blueLight2"
+              },
+              {
+                "id": "selcJuewtU3DKkjpT",
+                "name": "Gelijkvloers",
+                "color": "tealLight2"
+              },
+              {
+                "id": "sel9ByRH2lrKGkTRv",
+                "name": "1ste Verdiep",
+                "color": "greenLight2"
+              },
+              {
+                "id": "seleh9qMso6Jga1jF",
+                "name": "2de Verdiep",
+                "color": "cyanLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fld0QGNvTPStqbWn5",
+          "name": "Room (single)",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "seloUE4IpYI3MYVj7",
+                "name": "Algemeen",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selPcFp57YHU04IeY",
+                "name": "Living",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selPc0qLvmgG5cXlG",
+                "name": "Toilet",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sele5ZKUbodKhxHqo",
+                "name": "Slaapkamer",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel6zQlEk0QDpWrT6",
+                "name": "Badkamer",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selOoIw0YObY6rl0t",
+                "name": "Inkomhal",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selQ4XkI9AWkLCeVR",
+                "name": "2de Hal",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selUJEfx8MtjAeIcr",
+                "name": "Keuken",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selUhK6gxu7DNimk6",
+                "name": "2de Keuken",
+                "color": "redLight2"
+              },
+              {
+                "id": "selQfObXWWj1Lbxsw",
+                "name": "Voortuin",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selUi1aPZ632GntxW",
+                "name": "Achtertuin",
+                "color": "grayLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldKBzKayJu50kava",
+          "name": "Room (multi)",
+          "type": "multipleSelects",
+          "options": {
+            "choices": [
+              {
+                "id": "seloUE4IpYI3MYVj7",
+                "name": "Algemeen",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selPcFp57YHU04IeY",
+                "name": "Living",
+                "color": "tealLight2"
+              },
+              {
+                "id": "selPc0qLvmgG5cXlG",
+                "name": "Toilet",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "sele5ZKUbodKhxHqo",
+                "name": "Slaapkamer",
+                "color": "blueLight2"
+              },
+              {
+                "id": "sel6zQlEk0QDpWrT6",
+                "name": "Badkamer",
+                "color": "greenLight2"
+              },
+              {
+                "id": "selOoIw0YObY6rl0t",
+                "name": "Inkomhal",
+                "color": "cyanLight2"
+              },
+              {
+                "id": "selQ4XkI9AWkLCeVR",
+                "name": "2de Hal",
+                "color": "pinkLight2"
+              },
+              {
+                "id": "selUJEfx8MtjAeIcr",
+                "name": "Keuken",
+                "color": "orangeLight2"
+              },
+              {
+                "id": "selUhK6gxu7DNimk6",
+                "name": "2de Keuken",
+                "color": "redLight2"
+              },
+              {
+                "id": "selQfObXWWj1Lbxsw",
+                "name": "Voortuin",
+                "color": "purpleLight2"
+              },
+              {
+                "id": "selUi1aPZ632GntxW",
+                "name": "Achtertuin",
+                "color": "grayLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fld1xtyq10mqBDZsJ",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fld8FaTSCkA5TxRXi",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fld87td6eUucSSTRu",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldamDXY8B8dzUVad",
+          "name": "Link: Deal",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldl8CV42OBhsjfox"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    },
+    {
+      "id": "tblCQf6v56bgKho1m",
+      "name": "Equipment List",
+      "primaryFieldId": "fldYHmAjlwdMuZrLw",
+      "fields": [
+        {
+          "id": "fldYHmAjlwdMuZrLw",
+          "name": "Item Name",
+          "type": "singleLineText"
+        },
+        {
+          "id": "fldPxbFcIpW0iFxRU",
+          "name": "Status",
+          "type": "singleSelect",
+          "options": {
+            "choices": [
+              {
+                "id": "sel7GaTAjBYS33uCy",
+                "name": "Buy",
+                "color": "redLight2"
+              },
+              {
+                "id": "selJ5x3QoHIQBKo7H",
+                "name": "In progress",
+                "color": "yellowLight2"
+              },
+              {
+                "id": "selwYDPhhGyih8lTG",
+                "name": "Purchased",
+                "color": "greenLight2"
+              }
+            ]
+          }
+        },
+        {
+          "id": "fldzoF3SlFRtovv9d",
+          "name": "Notes",
+          "type": "multilineText"
+        },
+        {
+          "id": "fldGEPSmgvS8FmZSv",
+          "name": "Created",
+          "type": "createdTime",
+          "options": {
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          }
+        },
+        {
+          "id": "fld2Bt3ecu3BLo232",
+          "name": "Last Modified",
+          "type": "lastModifiedTime",
+          "options": {
+            "isValid": true,
+            "referencedFieldIds": [],
+            "result": {
+              "type": "dateTime",
+              "options": {
+                "dateFormat": {
+                  "name": "iso",
+                  "format": "YYYY-MM-DD"
+                },
+                "timeFormat": {
+                  "name": "24hour",
+                  "format": "HH:mm"
+                },
+                "timeZone": "client"
+              }
+            }
+          },
+          "isValid": true
+        },
+        {
+          "id": "fldimjpsxHB3flOaF",
+          "name": "Deals",
+          "type": "multipleRecordLinks",
+          "options": {
+            "linkedTableId": "tblfVmtjlsEdFT0nN",
+            "isReversed": false,
+            "prefersSingleRecordLink": true,
+            "inverseLinkFieldId": "fldOPbtU1A9MtkhEh"
+          },
+          "linkedTableId": "tblfVmtjlsEdFT0nN",
+          "prefersSingleRecordLink": true,
+          "isReversed": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "tblvi32qchvrRys3i",
+      "to": "tblHCWiPfjiIUJfQE",
+      "fieldId": "fldqS97qYNvGxvCMz",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Link: Company"
+    },
+    {
+      "from": "tblvi32qchvrRys3i",
+      "to": "tblfVmtjlsEdFT0nN",
+      "fieldId": "fldeUhaMROS0MiGkm",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Link: Deals"
+    },
+    {
+      "from": "tblHCWiPfjiIUJfQE",
+      "to": "tblfVmtjlsEdFT0nN",
+      "fieldId": "fldNWh9vnZgoF7NqP",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Link: Deals"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblRCFcb2aHDzQNtt",
+      "fieldId": "fldX164NioetzrUXS",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Measurements"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblF5ohNrlYW2rvSi",
+      "fieldId": "fldl8CV42OBhsjfox",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Activity List"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tbln4f7Qr5bREKeOu",
+      "fieldId": "fldC9cozCphW4bRYj",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Material List"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblCQf6v56bgKho1m",
+      "fieldId": "fldOPbtU1A9MtkhEh",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Equipment List"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tbltCPzmapNe4DRRz",
+      "fieldId": "fldLp3e5Zw23jO3TR",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Time Estimation"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblFi24uTAAQZSwjt",
+      "fieldId": "fldQ0hlmNNf4Ry3TO",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Project Estimation"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblVe1pR3AoNiOVTy",
+      "fieldId": "fldajYGAeUuSIfy3n",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Proposal"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tbl0B4Rmob8fBEi5E",
+      "fieldId": "fldBz8svvMRzNGeHd",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Material Tracking"
+    },
+    {
+      "from": "tblfVmtjlsEdFT0nN",
+      "to": "tblcJ3wSPtkvRCYRB",
+      "fieldId": "fldSMha9qWXQhuInQ",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Planning"
+    },
+    {
+      "from": "tblcJ3wSPtkvRCYRB",
+      "to": "tblcJ3wSPtkvRCYRB",
+      "fieldId": "fldhg3c09S6eIVoWS",
+      "type": "oneToMany",
+      "sourceCardinality": "*",
+      "targetCardinality": "*",
+      "sourceFieldName": "Dependencies"
+    }
+  ]
+}
